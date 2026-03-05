@@ -1,5 +1,4 @@
 name: Build and Push to ACR
-
 on:
   push:
     branches:
