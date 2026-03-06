@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vineelademoapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vineelademoapp
+  template:
+    metadata:
+      labels:
+        app: vineelademoapp 
+    spec:
+      containers:
+        - name: vineelademoapp 
+          image: murthyacr.azurecr.io/vineelademoapp
+          ports:
+          - containerPort: 80
